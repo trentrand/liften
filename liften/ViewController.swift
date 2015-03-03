@@ -29,7 +29,7 @@ class ViewController: UIViewController, GMSMapViewDelegate, CLLocationManagerDel
         super.viewDidLoad()
         // Do any additional setup after
         // loading the view, typically from a nib.
-        
+        self.navigationController?.navigationBar.hidden = false
         // Setup LocationManager to retrieve currentlocation
         locationManager = CLLocationManager()
         locationManager.delegate = self;
@@ -38,14 +38,29 @@ class ViewController: UIViewController, GMSMapViewDelegate, CLLocationManagerDel
         
         //Setup map
         mapView = GMSMapView.mapWithFrame(CGRectMake(0, 64, 600, 487), camera: camera)
-        mapView.myLocationEnabled = true
         mapView.mapType = kGMSTypeHybrid
         mapView.delegate = self
-        mapView.settings.myLocationButton = true
+        mapView.settings.myLocationButton = false
         self.view = mapView
+        
+        // Add search bar to navigationbar
+        let destinationTextField = UITextField(frame: CGRectMake(78, 11, 170, 25))
+        destinationTextField.backgroundColor = UIColor.whiteColor()
+        destinationTextField.textColor = UIColor.blackColor()
+        destinationTextField.font.fontWithSize(16)
+        destinationTextField.placeholder = "Destination Search"
+        destinationTextField.borderStyle = UITextBorderStyle.RoundedRect
+        destinationTextField.textAlignment = NSTextAlignment.Center
+        destinationTextField.autocorrectionType = UITextAutocorrectionType.Yes
+        destinationTextField.delegate = self
+        self.navigationController?.navigationBar.addSubview(destinationTextField)
         
         // Setup cache
         NSCache.sharedInstance.name = "cache"
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.hidden = false
     }
 
     func mapView(mapView: GMSMapView!, didChangeCameraPosition position: GMSCameraPosition!) {
