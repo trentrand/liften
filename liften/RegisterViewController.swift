@@ -15,11 +15,17 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var passwordTextField: UITextField!
     
     override func viewDidLoad() {
-        self.navigationController?.navigationBar.hidden = false
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBar.hidden = false
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    @IBAction func unwind(sender: AnyObject) {
+        let loginVC = self.storyboard?.instantiateViewControllerWithIdentifier("loginView") as LoginViewController
+        self.presentViewController(loginVC, animated: true, completion: nil)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -42,9 +48,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             if error == nil {
                 // Registration Successful
                 NSLog("User registration successful with credentials \(email) / \(password)")
-                // TODO switch to map view
-//                let viewController: ViewController = ViewController()
-//                self.showViewController(viewController, sender: self)
+                // Present LiftenViewController
+                let liftenVC = self.storyboard?.instantiateViewControllerWithIdentifier("liftenView") as LiftenViewController
+                self.presentViewController(liftenVC, animated: true, completion: nil)
             } else {
                 // Show the errorString somewhere and let the user try again.
                 var alert = UIAlertController(title: "There was a problem", message: "\(error.userInfo)", preferredStyle: UIAlertControllerStyle.Alert)

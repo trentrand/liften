@@ -16,11 +16,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var passwordTextField: UITextField!
     
     override func viewDidLoad() {
-        self.navigationController?.navigationBar.hidden = true
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBar.hidden = true
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     @IBAction func btnRegisterPressed(sender: AnyObject) {
@@ -39,7 +39,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             PFUser.logInWithUsernameInBackground(emailTextField.text, password:passwordTextField.text) {
                 (user: PFUser!, error: NSError!) -> Void in
                 if user != nil {
-                    // TODO Do stuff after successful login.
+                    // Present LiftenViewController
+                    let liftenVC = self.storyboard?.instantiateViewControllerWithIdentifier("liftenView") as LiftenViewController
+                    self.presentViewController(liftenVC, animated: true, completion: nil)
                 } else {
                     // The login failed. Check error to see why.
                     var alert = UIAlertController(title: "There was a problem", message: "\(error.localizedDescription)", preferredStyle: UIAlertControllerStyle.Alert)
@@ -75,9 +77,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     NSLog("User with facebook logged in")
                 }
                 NSLog("User with facebook logged in!")
-                // TODO switch to map view
-                //            let viewController: ViewController = ViewController()
-                //            self.showViewController(viewController, sender: self)
+                // Present LiftenViewController
+                let liftenVC = self.storyboard?.instantiateViewControllerWithIdentifier("liftenView") as LiftenViewController
+                self.presentViewController(liftenVC, animated: true, completion: nil)
             }
         })
     }
