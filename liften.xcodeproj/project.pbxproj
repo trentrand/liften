@@ -44,7 +44,10 @@
 		DFA8ED9D1AA02E27002A9C95 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA8ED9C1AA02E27002A9C95 /* MapKit.framework */; };
 		DFCA73981AC9308F008D1636 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD34BF71AA0F1FF0052B92A /* libstdc++.6.dylib */; };
 		DFD34BF61AA0F1E60052B92A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD34BF51AA0F1E60052B92A /* FacebookSDK.framework */; };
-		DFEC550B1AC93DD800C446BC /* LiftinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEC550A1AC93DD800C446BC /* LiftinViewController.swift */; };
+		DFEC550B1AC93DD800C446BC /* LiftenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEC550A1AC93DD800C446BC /* LiftenViewController.swift */; };
+		DFEC550D1AC958F400C446BC /* Action.png in Resources */ = {isa = PBXBuildFile; fileRef = DFEC550C1AC958F400C446BC /* Action.png */; };
+		DFEC550F1AC959EC00C446BC /* Upload-25.png in Resources */ = {isa = PBXBuildFile; fileRef = DFEC550E1AC959EC00C446BC /* Upload-25.png */; };
+		DFEC55111AC95A2C00C446BC /* Upload-32.png in Resources */ = {isa = PBXBuildFile; fileRef = DFEC55101AC95A2C00C446BC /* Upload-32.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +113,10 @@
 		DFA8ED9C1AA02E27002A9C95 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DFD34BF51AA0F1E60052B92A /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		DFD34BF71AA0F1FF0052B92A /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
-		DFEC550A1AC93DD800C446BC /* LiftinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiftinViewController.swift; sourceTree = "<group>"; };
+		DFEC550A1AC93DD800C446BC /* LiftenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiftenViewController.swift; sourceTree = "<group>"; };
+		DFEC550C1AC958F400C446BC /* Action.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Action.png; sourceTree = "<group>"; };
+		DFEC550E1AC959EC00C446BC /* Upload-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Upload-25.png"; sourceTree = "<group>"; };
+		DFEC55101AC95A2C00C446BC /* Upload-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Upload-32.png"; sourceTree = "<group>"; };
 		EDBC3D6C0B9C8ECE7DE95F7F /* Pods-liften.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-liften.release.xcconfig"; path = "Pods/Target Support Files/Pods-liften/Pods-liften.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +190,9 @@
 		DF13ECCF1AA0FBFF00A1B555 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				DFEC55101AC95A2C00C446BC /* Upload-32.png */,
+				DFEC550E1AC959EC00C446BC /* Upload-25.png */,
+				DFEC550C1AC958F400C446BC /* Action.png */,
 				DF13ECE01AA0FF9400A1B555 /* ButtonGroupTop.png */,
 				DF13ECD01AA0FC0000A1B555 /* liftenicon.png */,
 				DF13ECD11AA0FC0000A1B555 /* liftenicon.psd */,
@@ -222,7 +231,7 @@
 				DF84E2211A9E67F7002CD97C /* AppDelegate.swift */,
 				DF13ECDE1AA0FCB600A1B555 /* LoginViewController.swift */,
 				DF13ECE61AA41E3400A1B555 /* RegisterViewController.swift */,
-				DFEC550A1AC93DD800C446BC /* LiftinViewController.swift */,
+				DFEC550A1AC93DD800C446BC /* LiftenViewController.swift */,
 				DF09AF9F1AA07EF700522996 /* NSCoding+Singleton.swift */,
 				DF84E25B1A9E6B70002CD97C /* liften-Bridging-Header.h */,
 				DF84E2251A9E67F7002CD97C /* Main.storyboard */,
@@ -360,13 +369,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFEC550F1AC959EC00C446BC /* Upload-25.png in Resources */,
 				DF84E2271A9E67F7002CD97C /* Main.storyboard in Resources */,
 				DF13ECD91AA0FC0000A1B555 /* liftenlogo.png in Resources */,
 				DF84E22C1A9E67F7002CD97C /* LaunchScreen.xib in Resources */,
+				DFEC550D1AC958F400C446BC /* Action.png in Resources */,
 				DF13ECDC1AA0FC0000A1B555 /* map_pointers.png in Resources */,
 				DF13ECE11AA0FF9400A1B555 /* ButtonGroupTop.png in Resources */,
 				DF13ECDA1AA0FC0000A1B555 /* Login Screen.png in Resources */,
 				DF13ECD71AA0FC0000A1B555 /* liftenicon.png in Resources */,
+				DFEC55111AC95A2C00C446BC /* Upload-32.png in Resources */,
 				DF13ECDD1AA0FC0000A1B555 /* Splash Screen.png in Resources */,
 				DF13ECDB1AA0FC0000A1B555 /* Main Screen.png in Resources */,
 				DF13ECE51AA1020900A1B555 /* Images.xcassets in Resources */,
@@ -424,7 +436,7 @@
 				DF84E2221A9E67F7002CD97C /* AppDelegate.swift in Sources */,
 				DF09AFA01AA07EF700522996 /* NSCoding+Singleton.swift in Sources */,
 				DF13ECE71AA41E3400A1B555 /* RegisterViewController.swift in Sources */,
-				DFEC550B1AC93DD800C446BC /* LiftinViewController.swift in Sources */,
+				DFEC550B1AC93DD800C446BC /* LiftenViewController.swift in Sources */,
 				DF13ECDF1AA0FCB600A1B555 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
