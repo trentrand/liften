@@ -39,10 +39,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             PFUser.logInWithUsernameInBackground(emailTextField.text, password:passwordTextField.text) {
                 (user: PFUser!, error: NSError!) -> Void in
                 if user != nil {
+<<<<<<< HEAD
                     // TODO Do stuff after successful login.
                 } else {
                     // The login failed. Check error to see why.
                     var alert = UIAlertController(title: "There was a problem", message: "\(error.localizedDescription)", preferredStyle: UIAlertControllerStyle.Alert)
+=======
+                    // Do stuff after successful login.
+                    let viewController: ViewController = ViewController()
+                    self.showViewController(viewController, sender: self)
+                } else {
+                    // The login failed. Check error to see why.
+                    var alert = UIAlertController(title: "There was a problem", message: "\(error.userInfo)", preferredStyle: UIAlertControllerStyle.Alert)
+>>>>>>> origin/master
                     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
                     self.presentViewController(alert, animated: true, completion: nil)
                 }
@@ -75,10 +84,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     NSLog("User with facebook logged in")
                 }
                 NSLog("User with facebook logged in!")
+<<<<<<< HEAD
                 // TODO switch to map view
                 //            let viewController: ViewController = ViewController()
                 //            self.showViewController(viewController, sender: self)
             }
+=======
+            }
+            let viewController: ViewController = ViewController()
+            self.showViewController(viewController, sender: self)
+>>>>>>> origin/master
         })
     }
     

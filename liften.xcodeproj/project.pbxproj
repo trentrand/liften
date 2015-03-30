@@ -42,9 +42,14 @@
 		DF84E2581A9E6A74002CD97C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF84E2571A9E6A74002CD97C /* QuartzCore.framework */; };
 		DF84E25A1A9E6A7A002CD97C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF84E2591A9E6A7A002CD97C /* SystemConfiguration.framework */; };
 		DFA8ED9D1AA02E27002A9C95 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA8ED9C1AA02E27002A9C95 /* MapKit.framework */; };
+<<<<<<< HEAD
 		DFCA73981AC9308F008D1636 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD34BF71AA0F1FF0052B92A /* libstdc++.6.dylib */; };
 		DFCA739A1AC939E4008D1636 /* LiftinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCA73991AC939E4008D1636 /* LiftinViewController.swift */; };
 		DFD34BF61AA0F1E60052B92A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD34BF51AA0F1E60052B92A /* FacebookSDK.framework */; };
+=======
+		DFD34BF61AA0F1E60052B92A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD34BF51AA0F1E60052B92A /* FacebookSDK.framework */; };
+		DFD34BF81AA0F1FF0052B92A /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD34BF71AA0F1FF0052B92A /* libstdc++.6.dylib */; };
+>>>>>>> origin/master
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +113,10 @@
 		DF84E2591A9E6A7A002CD97C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DF84E25B1A9E6B70002CD97C /* liften-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "liften-Bridging-Header.h"; sourceTree = "<group>"; };
 		DFA8ED9C1AA02E27002A9C95 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+<<<<<<< HEAD
 		DFCA73991AC939E4008D1636 /* LiftinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiftinViewController.swift; sourceTree = "<group>"; };
+=======
+>>>>>>> origin/master
 		DFD34BF51AA0F1E60052B92A /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		DFD34BF71AA0F1FF0052B92A /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		EDBC3D6C0B9C8ECE7DE95F7F /* Pods-liften.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-liften.release.xcconfig"; path = "Pods/Target Support Files/Pods-liften/Pods-liften.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,7 +127,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				DFCA73981AC9308F008D1636 /* libstdc++.6.dylib in Frameworks */,
+=======
+				DFD34BF81AA0F1FF0052B92A /* libstdc++.6.dylib in Frameworks */,
+>>>>>>> origin/master
 				DF09AFBC1AA0EF0900522996 /* Accounts.framework in Frameworks */,
 				DF09AFBA1AA0EF0300522996 /* Social.framework in Frameworks */,
 				DF09AFB81AA0E8E000522996 /* libsqlite3.dylib in Frameworks */,
@@ -220,9 +232,16 @@
 			isa = PBXGroup;
 			children = (
 				DF84E2211A9E67F7002CD97C /* AppDelegate.swift */,
+<<<<<<< HEAD
 				DF13ECDE1AA0FCB600A1B555 /* LoginViewController.swift */,
 				DF13ECE61AA41E3400A1B555 /* RegisterViewController.swift */,
 				DFCA73991AC939E4008D1636 /* LiftinViewController.swift */,
+=======
+				DF84E2231A9E67F7002CD97C /* ViewController.swift */,
+				DF13ECDE1AA0FCB600A1B555 /* LoginViewController.swift */,
+				DF13ECE61AA41E3400A1B555 /* RegisterViewController.swift */,
+				DFA897A31AA0583200FA4716 /* Place.swift */,
+>>>>>>> origin/master
 				DF09AF9F1AA07EF700522996 /* NSCoding+Singleton.swift */,
 				DF84E25B1A9E6B70002CD97C /* liften-Bridging-Header.h */,
 				DF84E2251A9E67F7002CD97C /* Main.storyboard */,
@@ -371,6 +390,10 @@
 				DF13ECDB1AA0FC0000A1B555 /* Main Screen.png in Resources */,
 				DF13ECE51AA1020900A1B555 /* Images.xcassets in Resources */,
 				DF13ECD81AA0FC0000A1B555 /* liftenicon.psd in Resources */,
+<<<<<<< HEAD
+=======
+				DF84E25F1A9E6C42002CD97C /* GoogleMaps.bundle in Resources */,
+>>>>>>> origin/master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,8 +447,13 @@
 				DF84E2221A9E67F7002CD97C /* AppDelegate.swift in Sources */,
 				DF09AFA01AA07EF700522996 /* NSCoding+Singleton.swift in Sources */,
 				DF13ECE71AA41E3400A1B555 /* RegisterViewController.swift in Sources */,
+<<<<<<< HEAD
 				DFCA739A1AC939E4008D1636 /* LiftinViewController.swift in Sources */,
 				DF13ECDF1AA0FCB600A1B555 /* LoginViewController.swift in Sources */,
+=======
+				DF13ECDF1AA0FCB600A1B555 /* LoginViewController.swift in Sources */,
+				DFA897A41AA0583200FA4716 /* Place.swift in Sources */,
+>>>>>>> origin/master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
