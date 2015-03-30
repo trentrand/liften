@@ -48,9 +48,9 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 2
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 4
 
-// FTGooglePlacesAPI
-#define COCOAPODS_POD_AVAILABLE_FTGooglePlacesAPI
-#define COCOAPODS_VERSION_MAJOR_FTGooglePlacesAPI 1
-#define COCOAPODS_VERSION_MINOR_FTGooglePlacesAPI 1
-#define COCOAPODS_VERSION_PATCH_FTGooglePlacesAPI 0
+// SPGooglePlacesAutocomplete
+#define COCOAPODS_POD_AVAILABLE_SPGooglePlacesAutocomplete
+#define COCOAPODS_VERSION_MAJOR_SPGooglePlacesAutocomplete 1
+#define COCOAPODS_VERSION_MINOR_SPGooglePlacesAutocomplete 0
+#define COCOAPODS_VERSION_PATCH_SPGooglePlacesAutocomplete 4
 

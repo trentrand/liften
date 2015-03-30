@@ -1,1 +1,0 @@
-../../../FTGooglePlacesAPI/FTGooglePlacesAPI/FTGooglePlacesAPIDetailResponse.h

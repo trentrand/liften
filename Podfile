@@ -2,8 +2,8 @@
 platform :ios, '8.0'
 
 target 'liften' do
-pod 'FTGooglePlacesAPI'
 pod 'AFNetworking'
+pod 'SPGooglePlacesAutocomplete'
 end
 
 target 'liftenTests' do

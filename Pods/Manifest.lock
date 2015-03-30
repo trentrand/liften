@@ -18,15 +18,14 @@ PODS:
   - AFNetworking/UIKit (2.2.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - FTGooglePlacesAPI (1.1):
-    - AFNetworking (~> 2.2.0)
+  - SPGooglePlacesAutocomplete (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking
-  - FTGooglePlacesAPI
+  - SPGooglePlacesAutocomplete
 
 SPEC CHECKSUMS:
-  AFNetworking: ab63e259fe91eef4519b371ef0a4955af0e73e64
-  FTGooglePlacesAPI: 473989c6e7ca0f300f3de50f8f2171986bbf4c14
+  AFNetworking: caca0799b310f0c3bf1fc1af45145fc96972bcab
+  SPGooglePlacesAutocomplete: ed6b50bec1ea0c3382a1812990d7c7e2551822f2
 
 COCOAPODS: 0.35.0
