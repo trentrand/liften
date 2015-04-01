@@ -14,7 +14,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var btnRegister: UIButton!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-    
+        
     override func viewDidLoad() {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }

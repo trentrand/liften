@@ -13,6 +13,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var btnDone: UIButton!
     @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var btnUserType: UISegmentedControl!
     
     override func viewDidLoad() {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
@@ -32,16 +33,17 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         if (textField == emailTextField) {
             passwordTextField.select(textField)
         } else {
-            registerUser(emailTextField.text, password: passwordTextField.text)
+            registerUser(emailTextField.text, password: passwordTextField.text, userType: btnUserType.selectedSegmentIndex)
         }
         return true
     }
     
-    func registerUser(email: String, password: String) {
+    func registerUser(email: String, password: String, userType: Int) {
         var user = PFUser()
         user.username = email
         user.password = password
         user.email = email
+        user["userType"] = userType
         
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool!, error: NSError!) -> Void in
@@ -63,6 +65,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func doneButton(sender: AnyObject) {
         btnDone.enabled = false
-        registerUser(emailTextField.text, password: passwordTextField.text)
+        registerUser(emailTextField.text, password: passwordTextField.text, userType: btnUserType.selectedSegmentIndex)
     }
 }
