@@ -15,17 +15,11 @@
                 <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="liftenlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="2um-gR-pas">
-                        <rect key="frame" x="215" y="8" width="171" height="198"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="171" id="rrJ-1N-LOB"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="liften" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfV-sW-Bnw">
-                        <rect key="frame" x="215" y="216" width="171" height="64"/>
+                        <rect key="frame" x="215" y="268" width="171" height="64"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="64" id="3lJ-aN-RIs"/>
-                            <constraint firstAttribute="width" constant="171" id="L0k-xC-SMJ"/>
+                            <constraint firstAttribute="width" constant="171" id="DkK-vx-IPc"/>
+                            <constraint firstAttribute="height" constant="64" id="x05-BF-MYv"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="76"/>
                         <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -41,24 +35,39 @@
                         <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="liftenlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="2um-gR-pas">
+                        <rect key="frame" x="215" y="43" width="171" height="252"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="171" id="hz8-01-2gB"/>
+                            <constraint firstAttribute="height" constant="252" id="klz-tu-4xq"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" red="0.39607843139999999" green="0.49803921569999998" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                 <color key="tintColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstItem="2um-gR-pas" firstAttribute="leading" secondItem="wfV-sW-Bnw" secondAttribute="leading" id="3ph-IA-Kvx"/>
                     <constraint firstItem="2um-gR-pas" firstAttribute="top" secondItem="1MW-Xw-UVP" secondAttribute="top" constant="8" id="Dap-7O-659"/>
-                    <constraint firstItem="bAn-YO-B5B" firstAttribute="top" secondItem="wfV-sW-Bnw" secondAttribute="bottom" constant="320" id="F15-aE-8M7"/>
+                    <constraint firstItem="2um-gR-pas" firstAttribute="top" secondItem="CzP-82-C9c" secondAttribute="bottom" constant="23" id="Fuq-aw-U17"/>
                     <constraint firstAttribute="centerX" secondItem="R9R-d6-HW7" secondAttribute="centerX" constant="-0.5" id="Ifu-Tg-ncH"/>
-                    <constraint firstItem="wfV-sW-Bnw" firstAttribute="top" secondItem="2um-gR-pas" secondAttribute="bottom" constant="10" id="JOK-5w-nfq"/>
-                    <constraint firstItem="2um-gR-pas" firstAttribute="trailing" secondItem="wfV-sW-Bnw" secondAttribute="trailing" id="LBC-GE-usO"/>
                     <constraint firstItem="wfV-sW-Bnw" firstAttribute="top" secondItem="2um-gR-pas" secondAttribute="bottom" constant="18" id="N49-gl-mQm"/>
+                    <constraint firstAttribute="centerX" secondItem="2um-gR-pas" secondAttribute="centerX" constant="-0.5" id="ObN-d5-dcb"/>
+                    <constraint firstItem="wfV-sW-Bnw" firstAttribute="top" secondItem="2um-gR-pas" secondAttribute="bottom" constant="-27" id="QZA-sl-qFD"/>
+                    <constraint firstAttribute="centerY" secondItem="wfV-sW-Bnw" secondAttribute="centerY" id="TC5-dr-Ysr"/>
                     <constraint firstItem="bAn-YO-B5B" firstAttribute="top" secondItem="R9R-d6-HW7" secondAttribute="bottom" constant="8" id="cPa-wy-Mjk"/>
+                    <constraint firstItem="wfV-sW-Bnw" firstAttribute="top" secondItem="2um-gR-pas" secondAttribute="bottom" constant="-27" id="cgd-Cy-sCu"/>
+                    <constraint firstItem="wfV-sW-Bnw" firstAttribute="top" secondItem="2um-gR-pas" secondAttribute="bottom" constant="-27" id="ch7-2C-y0M"/>
                     <constraint firstItem="2um-gR-pas" firstAttribute="centerX" secondItem="1MW-Xw-UVP" secondAttribute="centerX" id="guj-vk-y4K"/>
-                    <constraint firstItem="2um-gR-pas" firstAttribute="width" secondItem="wfV-sW-Bnw" secondAttribute="width" id="wCS-vG-3sA"/>
+                    <constraint firstAttribute="centerX" secondItem="wfV-sW-Bnw" secondAttribute="centerX" constant="-0.5" id="sUf-7j-M00"/>
+                    <constraint firstItem="wfV-sW-Bnw" firstAttribute="top" secondItem="2um-gR-pas" secondAttribute="bottom" constant="8" id="wcu-Js-RR1"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
+                        <exclude reference="Dap-7O-659"/>
+                        <exclude reference="guj-vk-y4K"/>
                         <exclude reference="N49-gl-mQm"/>
+                        <exclude reference="QZA-sl-qFD"/>
+                        <exclude reference="ch7-2C-y0M"/>
+                        <exclude reference="wcu-Js-RR1"/>
                     </mask>
                 </variation>
             </view>

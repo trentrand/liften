@@ -35,8 +35,6 @@
 	<string>1405670876405399</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>liften</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -61,6 +59,10 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Please allow access to location services.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Please allow access to location services.</string>
+	<key>privacy - location usage description</key>
 	<string>Please allow access to location services.</string>
 </dict>
 </plist>

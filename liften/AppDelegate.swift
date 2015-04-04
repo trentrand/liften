@@ -62,5 +62,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNDelegate {
         PFFacebookUtils.session().close()
     }
     
+    func pubnubClient(client: PubNub!, didConnectToOrigin origin: String!) {
+        NSLog("DELEGATE: Connected to origin: \(origin)")
+    }
+    
+    func pubnubClient(client: PubNub!, didReceiveMessage message: PNMessage!) {
+        //Messages received in LiftenViewController also
+        // Logic is handled there
+//        NSLog("Received: \(message.message)")
+    }
+    
+    func pubnubClient(client: PubNub!, didSubscribeOnChannels channels: [AnyObject]!) {
+        NSLog("DELEGATE: Subscribed to channel: \(channels)")
+    }
+    
 }
 
