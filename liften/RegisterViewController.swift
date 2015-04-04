@@ -33,7 +33,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         if (textField == emailTextField) {
             passwordTextField.select(textField)
         } else {
-            registerUser(emailTextField.text, password: passwordTextField.text, userType: btnUserType.selectedSegmentIndex)
+            registerUser(emailTextField.text.lowercaseString, password: passwordTextField.text, userType: btnUserType.selectedSegmentIndex)
         }
         return true
     }
@@ -55,7 +55,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 self.presentViewController(liftenVC, animated: true, completion: nil)
             } else {
                 // Show the errorString somewhere and let the user try again.
-                var alert = UIAlertController(title: "There was a problem", message: "\(error.userInfo)", preferredStyle: UIAlertControllerStyle.Alert)
+                let errorString = error.userInfo?["error"] as NSString
+                var alert = UIAlertController(title: "There was a problem", message: errorString, preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
             }

@@ -36,7 +36,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             self.view.endEditing(true)
             
             // Attempt to login w/ parse
-            PFUser.logInWithUsernameInBackground(emailTextField.text, password:passwordTextField.text) {
+            PFUser.logInWithUsernameInBackground(emailTextField.text.lowercaseString, password:passwordTextField.text) {
                 (user: PFUser!, error: NSError!) -> Void in
                 if user != nil {
                     // Present LiftenViewController
@@ -44,7 +44,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     self.presentViewController(liftenVC, animated: true, completion: nil)
                 } else {
                     // The login failed. Check error to see why.
-                    var alert = UIAlertController(title: "There was a problem", message: "\(error.localizedDescription)", preferredStyle: UIAlertControllerStyle.Alert)
+                    let errorString = error.userInfo?["error"] as NSString
+                    var alert = UIAlertController(title: "There was a problem", message: errorString, preferredStyle: UIAlertControllerStyle.Alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
                     self.presentViewController(alert, animated: true, completion: nil)
                 }
