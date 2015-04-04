@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, PNDelegate {
 
     var window: UIWindow?
 
@@ -21,13 +21,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
         PFFacebookUtils.initializeFacebook()
+    
+        let pnConfig: PNConfiguration = PNConfiguration(forOrigin: "pubsub.pubnub.com", publishKey: "pub-c-fb33efd6-47ad-4534-aaee-c4d218634c15", subscribeKey: "sub-c-94fa7b14-d74b-11e4-8301-0619f8945a4f", secretKey: "sec-c-ZGUxMDc0MzctOWMxOS00MjJhLWIyMDgtZjc5MDE1NTFiOTRj")
+        PubNub.setConfiguration(pnConfig)
+        PubNub.setDelegate(self)
+        PubNub.connect()
         
-
         return true
     }
     
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-        return FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication, withSession: PFFacebookUtils.session())
+    func application(application: UIApplication,
+        openURL url: NSURL,
+        sourceApplication: String?,
+        annotation: AnyObject?) -> Bool {
+            return FBAppCall.handleOpenURL(url, sourceApplication:sourceApplication,
+                withSession:PFFacebookUtils.session())
     }
 
     
@@ -46,7 +54,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         FBAppCall.handleDidBecomeActiveWithSession(PFFacebookUtils.session())
     }
 
